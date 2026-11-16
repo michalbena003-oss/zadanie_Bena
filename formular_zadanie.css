@@ -1,0 +1,68 @@
+form{
+   
+    border-bottom: 5px solid #8ecae6;
+
+    
+}
+
+label{
+   color: white;
+    
+}
+.energy{
+    text-align: left;
+    border-bottom: 5px solid #8ecae6;
+    
+    
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #514d5b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #9b70ff;
+}
+h1{
+    text-align: center;
+    color: rgb(44, 43, 43);
+    margin-bottom: 20px;
+}
+input[type="radio"] {
+    accent-color: #c4ed78;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+input[type="radio"] + label {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="radio"]:checked + label {
+    color: #9b70ff;
+    font-weight: bold;
+}
+.vyber{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    width: 67px;
+    border-bottom: 5px #8ecae6 solid;
+}
+#meno, #email, #telefon, #datum, #kurz, #poznamka{
+  margin-top: 4px;
+  color:rgb(32, 10, 83);
+ 
+}
+
+label[for="meno"], label[for="email"], label[for="telefon"], label[for="datum"], label[for="kurz"], label[for="poznamka"] {
+  color: #c4b5fd;
+}
+.vyber{
+    color: #c4b5fd;
+}

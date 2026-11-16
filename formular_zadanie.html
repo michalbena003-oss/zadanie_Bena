@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta mame="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulár zadanie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formular_zadanie.css">
+    <script src="app.js" defer></script>
+    <script src="formular_zadanie.js" defer></script>
+</head>
+
+<body>
+    
+<main>
+    <section class="left">
+        <div class="kontajner">
+            <h1 class="energy">Formulár</h1>
+            <form id="form"action="" method="post">
+
+            <label for="meno">Meno a priezvisko:</label><br>
+            <input type="text" id="meno" name="meno" required>
+            <br><br>
+
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="telefon">Telefónne číslo:</label><br>
+            <input type="tel" id="telefon" name="telefon" required>
+            <br><br>
+
+            <label for="datum">Dátum narodenia:</label><br>
+            <input type="date" id="datum" name="datum" required>
+            <br><br>
+
+            <label for="kurz">Kurz:</label><br>
+            <select id="kurz" name="kurz" required>
+                <option value="">Vyber kurz</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+            <br><br>
+
+            <p class="vyber">Úroveň:</p>
+
+            <input type="radio" id="beginner" name="uroven" value="Beginner" required>
+            <label for="beginner">Beginner</label>
+            <br>
+
+            <input type="radio" id="intermediate" name="uroven" value="Intermediate">
+            <label for="intermediate">Intermediate</label>
+            <br>
+
+            <input type="radio" id="advanced" name="uroven" value="Advanced">
+            <label for="advanced">Advanced</label>
+            <br><br>
+
+            <label for="poznamka">Poznámka:</label><br>
+            <textarea id="poznamka" name="poznamka" rows="5" cols="40"></textarea>
+            <br><br>
+
+            <input type="checkbox" id="suhlas" name="suhlas" required>
+            <label for="suhlas">Súhlasím s podmienkami</label>
+            <br><br>
+
+            <button type="submit">Odoslať formulár</button>
+            </form>
+        </div>
+    <div id="nahlad">
+        <h1 class="energy">Živý náhľad</h1>
+        <div class="nahlad">
+            <p>Meno a priezvisko: <span id="nahladMeno"></span></p>
+            <p>E-mail: <span id="nahladEmail"></span></p>
+            <p>Kurz: <span id="nahladKurz"></span></p>
+            <p>Úroveň: <span id="nahladUroven"></span></p>
+            <p>Poznámka: <span id="nahladPoznamka"></span></p>
+        </div>
+    </div>
+
+    </section>
+
+</main>
+</body>
+</html>
