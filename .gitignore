@@ -910,3 +910,17 @@ node_modules/wrappy/LICENSE
 node_modules/wrappy/package.json
 node_modules/wrappy/README.md
 node_modules/wrappy/wrappy.js
+node_modules/.bin/bcrypt
+node_modules/.bin/bcrypt.cmd
+node_modules/.bin/bcrypt.ps1
+node_modules/bcryptjs/index.d.ts
+node_modules/bcryptjs/index.js
+node_modules/bcryptjs/LICENSE
+node_modules/bcryptjs/package.json
+node_modules/bcryptjs/README.md
+node_modules/bcryptjs/types.d.ts
+node_modules/bcryptjs/bin/bcrypt
+node_modules/bcryptjs/umd/index.d.ts
+node_modules/bcryptjs/umd/index.js
+node_modules/bcryptjs/umd/package.json
+node_modules/bcryptjs/umd/types.d.ts

@@ -1,5 +1,11 @@
 function nacitajKnihy() {
-  fetch("/api/knihy")
+  const hladat = document.getElementById("hladatInput").value;
+  const zoradit = document.getElementById("zoraditSelect").value;
+  const smer = document.getElementById("smerSelect").value;
+
+  const params = new URLSearchParams({ hladat, zoradit, smer });
+
+  fetch("/api/knihy?" + params.toString())
     .then(odpoved => odpoved.json())
     .then(knihy => {
       const zoznam = document.getElementById("zoznam");
@@ -159,3 +165,33 @@ formular.addEventListener("submit", event => {
 });
 
 nacitajKnihy();
+
+document.getElementById("hladatInput").addEventListener("input", nacitajKnihy);
+document.getElementById("zoraditSelect").addEventListener("change", nacitajKnihy);
+document.getElementById("smerSelect").addEventListener("change", nacitajKnihy);
+
+document.getElementById("resetFilterBtn").addEventListener("click", () => {
+  document.getElementById("hladatInput").value = "";
+  document.getElementById("zoraditSelect").value = "id";
+  document.getElementById("smerSelect").value = "ASC";
+  nacitajKnihy();
+});
+
+function zobrazPrihlasenehoPouzivatela() {
+  const infoEl = document.getElementById("prihlasenyInfo");
+  const ulozeny = sessionStorage.getItem("prihlasenyPouzivatel");
+  infoEl.innerHTML = "";
+
+  if (ulozeny) {
+    const pouzivatel = JSON.parse(ulozeny);
+    infoEl.textContent = `Prihlaseny pouzivatel: ${pouzivatel.meno} (${pouzivatel.email})`;
+  } else {
+    infoEl.append("Nie ste prihlaseny. ");
+    const odkaz = document.createElement("a");
+    odkaz.href = "prihlasenie.html";
+    odkaz.textContent = "Prihlasit sa";
+    infoEl.appendChild(odkaz);
+  }
+}
+
+zobrazPrihlasenehoPouzivatela();
